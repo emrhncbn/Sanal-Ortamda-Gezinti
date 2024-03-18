@@ -19,7 +19,12 @@ const handleEnter = (event) => {
     entranceTime: new Date (),
     clickCoordinates: {offsetX,offsetY},
   })
-  generateMessage(userData)
+  generateMessage({
+    hasEntered: true,
+    pageLoadTime: userData.pageLoadTime,
+    entranceTime: new Date (),
+    clickCoordinates: {offsetX,offsetY}
+  })
 }
 
   /* Challenge
